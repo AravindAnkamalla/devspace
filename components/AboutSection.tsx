@@ -1,23 +1,15 @@
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, Code, Star } from 'lucide-react';
-import { User } from '@/types'; // Import the User type
-import { openInNewTab, openMailClient } from '@/lib/utils';
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail, Code, Star } from "lucide-react";
+import { User } from "@/types"; // Import the User type
+import { openInNewTab, openMailClient } from "@/lib/utils";
 
 interface AboutSectionProps {
   user: User;
 }
 
 const AboutSection: React.FC<AboutSectionProps> = ({ user }) => {
-    const handleGitHubClick = () => {
-    if (user.socialLinks?.github) {
-      window.open(user.socialLinks.github, '_blank'); 
-    } else {
-      console.warn("GitHub link not available for the user.");
-      
-    }
-  };
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50">
       <div className="max-w-6xl mx-auto">
@@ -31,25 +23,39 @@ const AboutSection: React.FC<AboutSectionProps> = ({ user }) => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              I'm a passionate full-stack developer with over 1 years of experience creating
-              digital solutions that make a difference. I specialize in modern web technologies
-              and love bringing ideas to life through clean, efficient code.
+              I&apos;m a passionate full-stack developer with over 1 years of
+              experience creating digital solutions that make a difference. I
+              specialize in modern web technologies and love bringing ideas to
+              life through clean, efficient code.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              When I'm not coding, you can find me exploring new technologies, contributing to
-              open-source projects, or sharing knowledge with the developer community.
+              When I&apos;m not coding, you can find me exploring new
+              technologies, contributing to open-source projects, or sharing
+              knowledge with the developer community.
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="outline" size="sm" onClick={()=>openInNewTab(user.socialLinks?.github)}>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => openInNewTab(user.socialLinks?.github)}
+              >
                 <Github className="w-4 h-4 mr-2" />
                 GitHub
               </Button>
-              <Button variant="outline" size="sm" onClick={()=>openInNewTab(user.socialLinks?.linkedin)}>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => openInNewTab(user.socialLinks?.linkedin)}
+              >
                 <Linkedin className="w-4 h-4 mr-2" />
                 LinkedIn
               </Button>
-              <Button variant="outline" size="sm" onClick={()=> openMailClient(user.email)} >
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => openMailClient(user.email)}
+              >
                 <Mail className="w-4 h-4 mr-2" />
                 Email
               </Button>
