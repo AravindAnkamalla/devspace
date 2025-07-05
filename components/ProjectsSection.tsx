@@ -1,12 +1,16 @@
-
-
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Github, ExternalLink } from 'lucide-react';
-import { Project } from '@/types'; 
-import { openInNewTab } from '@/lib/utils';
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Github, ExternalLink } from "lucide-react";
+import { Project } from "@/types";
+import { openInNewTab } from "@/lib/utils";
 
 interface ProjectsSectionProps {
   projects: Project[];
@@ -22,13 +26,17 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Here are some of my recent projects that showcase my skills and passion for development
+            Here are some of my recent projects that showcase my skills and
+            passion for development
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <Card key={project.id} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-md overflow-hidden">
+            <Card
+              key={project.id}
+              className="group hover:shadow-xl transition-all duration-300 border-0 shadow-md overflow-hidden"
+            >
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
@@ -38,14 +46,26 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex space-x-2">
-                    <Button size="sm" variant="secondary" className="bg-white/90 hover:bg-white" onClick={()=>openInNewTab(project.githubLink)}>
+                    <Button
+                      size="sm"
+                      variant="secondary"
+                      className="bg-white/90 hover:bg-white"
+                      onClick={() => openInNewTab(project.githubLink)}
+                    >
                       <Github className="w-4 h-4 mr-1" />
                       Code
                     </Button>
-                    <Button size="sm" variant="secondary" className="bg-white/90 hover:bg-white"  onClick={()=>openInNewTab(project.liveLink)}>
-                      <ExternalLink className="w-4 h-4 mr-1" />
-                      Live
-                    </Button>
+                    {project.liveLink && (
+                      <Button
+                        size="sm"
+                        variant="secondary"
+                        className="bg-white/90 hover:bg-white"
+                        onClick={() => openInNewTab(project.liveLink)}
+                      >
+                        <ExternalLink className="w-4 h-4 mr-1" />
+                        Live
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -74,4 +94,4 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
   );
 };
 
-export default ProjectsSection; 
+export default ProjectsSection;
