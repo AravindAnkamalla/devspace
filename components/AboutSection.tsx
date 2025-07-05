@@ -23,15 +23,16 @@ const AboutSection: React.FC<AboutSectionProps> = ({ user }) => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              I&apos;m a passionate full-stack developer with over 1 years of
-              experience creating digital solutions that make a difference. I
-              specialize in modern web technologies and love bringing ideas to
-              life through clean, efficient code.
+              I&apos;m a full-stack developer experienced in building scalable
+              web and mobile applications using React, Node.js, TypeScript, and
+              AWS. I&apos;ve resolved 30+ production issues, and delivered
+              features in fast-paced Agile teams.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              When I&apos;m not coding, you can find me exploring new
-              technologies, contributing to open-source projects, or sharing
-              knowledge with the developer community.
+              I&apos;m passionate about clean code, performance optimization,
+              and creating impactful backend systems. When I&apos;m not coding,
+              you&apos;ll find me exploring new tech, contributing to
+              open-source, or sharing insights with the developer community.
             </p>
 
             <div className="flex flex-wrap gap-4">

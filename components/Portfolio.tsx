@@ -10,6 +10,7 @@ import AboutSection from './AboutSection';
 import ExperienceSection from './ExperienceSection';
 import Footer from './Footer';
 import ProjectsSection from './ProjectsSection';
+import PortfolioSkeleton from './PortfolioSkeleton';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -20,11 +21,7 @@ const Portfolio = () => {
   };
 
   if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center text-xl text-gray-700">
-        Loading portfolio...
-      </div>
-    );
+    return <PortfolioSkeleton/>
   }
 
   if (error) {
