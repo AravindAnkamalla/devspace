@@ -23,7 +23,7 @@ const Navigation: React.FC<NavigationProps> = ({
             {userName.split('  ')}
           </div>
           <div className="hidden md:flex space-x-8">
-            {['about', 'projects', 'experience'].map((section) => (
+            {['about', 'projects', 'experience','contact'].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}

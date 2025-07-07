@@ -8,6 +8,7 @@ import ExperienceSection from "./ExperienceSection";
 import Footer from "./Footer";
 import ProjectsSection from "./ProjectsSection";
 import { PortfolioData } from "@/types";
+import ContactForm from "./ContactForm";
 interface PortfolioProps {
   portfolioData: PortfolioData;
 }
@@ -31,6 +32,7 @@ const Portfolio = ({ portfolioData }: PortfolioProps) => {
       <AboutSection user={portfolioData.user} />
       <ProjectsSection projects={portfolioData.projects} />
       <ExperienceSection experiences={portfolioData.experiences} />
+      <ContactForm/>
       <Footer
         userName={portfolioData.user.name}
         email={portfolioData.user.name}
