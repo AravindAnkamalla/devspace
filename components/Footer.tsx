@@ -47,7 +47,7 @@ const Footer: React.FC<FooterProps> = ({ userName, email, userSocialLinks }) => 
           <Separator className="my-8 bg-gray-800" />
 
           <p className="text-gray-400 text-sm">
-            © 2025 {userName}. Built with Next.js, TailwindCSS & shadcn/ui
+            © {new Date().getFullYear()} {userName}. Built with Next.js, TailwindCSS & shadcn/ui
           </p>
         </div>
       </div>

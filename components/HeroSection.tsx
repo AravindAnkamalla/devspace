@@ -22,9 +22,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({ user }) => {
             </AvatarFallback>
           </Avatar>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent">
             {user.name}
           </h1>
+
+          {user.headline && (
+            <p className="text-lg md:text-xl font-medium text-blue-700 mb-6">
+              {user.headline}
+            </p>
+          )}
 
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             {user.bio}

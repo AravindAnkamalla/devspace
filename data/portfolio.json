@@ -1,0 +1,170 @@
+{
+  "user": {
+    "id": "aravind-ankamalla",
+    "name": "Aravind Ankamalla",
+    "email": "ankamallaaravind97@gmail.com",
+    "image": "/aravind profile.jpg",
+    "headline": "Software Engineer | Full-Stack Developer",
+    "bio": "Full-stack Software Engineer with 2+ years of experience building and scaling SaaS products across web, mobile, and backend services. Skilled in TypeScript, React, React Native, Node.js, GraphQL, PostgreSQL, Prisma, and AWS. Experienced in payment integrations, automotive dealership workflows, InsurTech platforms, API design, database modeling, and AI-assisted (agentic) development.",
+    "skillsets": [
+      "TypeScript",
+      "React",
+      "React Native",
+      "Next.js",
+      "Node.js",
+      "GraphQL",
+      "PostgreSQL",
+      "Prisma",
+      "AWS",
+      "Finix"
+    ],
+    "socialLinks": {
+      "github": "https://github.com/AravindAnkamalla",
+      "linkedin": "https://www.linkedin.com/in/aravind-ankamalla-245a9023b"
+    },
+    "resumeUrl": "/Aravind_Ankamalla_Resume.pdf"
+  },
+  "skillCategories": [
+    {
+      "name": "Languages",
+      "items": ["TypeScript", "JavaScript", "Java", "SQL", "HTML", "CSS"]
+    },
+    {
+      "name": "Frontend",
+      "items": [
+        "React.js",
+        "React Native",
+        "Next.js",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Zustand",
+        "React Query"
+      ]
+    },
+    {
+      "name": "Backend",
+      "items": [
+        "Node.js",
+        "Express.js",
+        "GraphQL",
+        "REST APIs",
+        "RedwoodJS",
+        "Prisma ORM",
+        "BullMQ"
+      ]
+    },
+    {
+      "name": "Data & Cloud",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "AWS",
+        "SST",
+        "Docker",
+        "Finix"
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "id": "leftlane",
+      "image": "/leftlane.png",
+      "title": "Software Engineer",
+      "company": "LeftLane Software Solutions · DMS",
+      "location": "",
+      "startDate": "2025-08-01",
+      "endDate": "2026-10-01",
+      "description": "Product-focused full-stack engineer building and scaling a Dealership Management System across web, mobile, and backend services.",
+      "highlights": [
+        "Developed end-to-end features across payments, customer portals, vehicle management, permissions, document automation, reporting, and dealership workflows.",
+        "Designed and integrated payment workflows including Finix tokenization, payment instruments, disputes, and payment processing.",
+        "Researched and implemented U.S. state-specific automotive, tax, title, registration, F&I, and compliance requirements.",
+        "Contributed to PRDs, TDDs, technical design, API development, database modeling, testing, code reviews, and production releases.",
+        "Leveraged agentic development workflows, including Grok bot automation and custom AI skill writing, to automate requirement analysis, research, and implementation."
+      ],
+      "techStacks": [
+        "TypeScript",
+        "React",
+        "React Native",
+        "Node.js",
+        "GraphQL",
+        "PostgreSQL",
+        "Prisma",
+        "RedwoodJS",
+        "BullMQ",
+        "AWS",
+        "Finix"
+      ]
+    },
+    {
+      "id": "berrybox",
+      "image": "/berrybox.png",
+      "title": "Software Development Engineer I",
+      "company": "BerryBox Benefits · InsurTech SaaS",
+      "location": "",
+      "startDate": "2024-06-01",
+      "endDate": "2025-05-01",
+      "description": "Built and maintained backend services, GraphQL APIs, and admin workflows for an InsurTech SaaS platform.",
+      "highlights": [
+        "Developed and maintained scalable backend services using AWS Lambda and AppSync to support real-time application features.",
+        "Built GraphQL APIs with AWS AppSync and Prisma ORM for type-safe communication between frontend and backend.",
+        "Integrated Order Management, Wallet Management, and Plan Subscription services with the mobile frontend for real-time updates.",
+        "Optimized Prisma queries in the Wallet system, reducing execution time by 50% (from 30s to 15s).",
+        "Created SQL scripts to track login activity, active sessions, and usage reports across BerryBox clients.",
+        "Integrated 10+ third-party APIs across Node.js, AWS, and React Native.",
+        "Diagnosed and resolved 30+ production issues, increasing system stability and accelerating sprint delivery.",
+        "Implemented employee, organization, and vendor onboarding workflows in the admin dashboard using Next.js, Zustand, Tailwind CSS, and shadcn/ui."
+      ],
+      "techStacks": [
+        "TypeScript",
+        "Node.js",
+        "React Native",
+        "Next.js",
+        "GraphQL",
+        "AWS Lambda",
+        "AWS AppSync",
+        "Prisma",
+        "PostgreSQL"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "event-management",
+      "title": "Event Management System",
+      "description": "Full-stack event platform with a Node.js/Express API, Prisma, PostgreSQL, and a React.js admin portal. Includes role-based authentication, admin-driven user creation, auto-generated password emails, and REST APIs for users, events, and registrations.",
+      "techStacks": [
+        "Node.js",
+        "Express.js",
+        "Prisma",
+        "PostgreSQL",
+        "React.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "React Query"
+      ],
+      "image": "https://aaftonline.com/blog/wp-content/uploads/2023/03/Untitled-design-23.jpg",
+      "githubLink": "https://github.com/AravindAnkamalla/event-mangement-admin-dashboard",
+      "liveLink": ""
+    },
+    {
+      "id": "devspace",
+      "title": "Aravind Devspace",
+      "description": "Personal portfolio for showcasing professional experience, projects, and contact details in a clean, responsive layout. Built with Next.js, Tailwind CSS, and shadcn/ui.",
+      "techStacks": ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"],
+      "image": "https://images.unsplash.com/photo-1605379399642-870262d3d051?fm=jpg&q=60&w=3000",
+      "githubLink": "https://github.com/AravindAnkamalla/devspace",
+      "liveLink": "https://aravind-devspace.vercel.app"
+    }
+  ],
+  "education": [
+    {
+      "id": "rgukt",
+      "degree": "Bachelor of Technology in Computer Science and Engineering",
+      "school": "Rajiv Gandhi University of Knowledge and Technologies (RGUKT), Basar",
+      "period": "2020 - 2024",
+      "details": "CGPA: 8.2"
+    }
+  ]
+}

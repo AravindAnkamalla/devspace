@@ -1,17 +1,19 @@
 'use client';
 
 import React from 'react';
-// import { Button } from '@/components/ui/button';
-// import { Download } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Download } from 'lucide-react';
 
 interface NavigationProps {
   userName: string;
+  resumeUrl?: string;
   activeSection: string;
   scrollToSection: (sectionId: string) => void;
 }
 
 const Navigation: React.FC<NavigationProps> = ({
   userName,
+  resumeUrl,
   activeSection,
   scrollToSection,
 }) => {
@@ -20,10 +22,10 @@ const Navigation: React.FC<NavigationProps> = ({
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-            {userName.split('  ')}
+            {userName}
           </div>
           <div className="hidden md:flex space-x-8">
-            {['about', 'projects', 'experience','contact'].map((section) => (
+            {['about', 'experience', 'projects', 'education', 'contact'].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
@@ -37,10 +39,14 @@ const Navigation: React.FC<NavigationProps> = ({
               </button>
             ))}
           </div>
-          {/* <Button variant="outline" size="sm">
-            <Download className="w-4 h-4 mr-2" />
-            Resume
-          </Button> */}
+          {resumeUrl && (
+            <Button variant="outline" size="sm" asChild>
+              <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
+                <Download className="w-4 h-4 mr-2" />
+                Resume
+              </a>
+            </Button>
+          )}
         </div>
       </div>
     </nav>

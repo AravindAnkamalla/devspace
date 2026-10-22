@@ -9,9 +9,11 @@ export interface User {
   name: string;
   email: string;
   image: string;
+  headline?: string;
   bio: string;
   skillsets: string[];
   socialLinks: UserSocialLinks;
+  resumeUrl?: string;
 }
 
 export interface Project {
@@ -25,19 +27,36 @@ export interface Project {
   linkedinLink?: string;
 }
 
+export interface SkillCategory {
+  name: string;
+  items: string[];
+}
+
 export interface Experience {
   id: string;
   image: string;
   title: string;
   company: string;
   location: string;
-  startDate: Date;
-  endDate: Date | null;
+  startDate: string;
+  endDate: string | null;
   description: string;
+  highlights?: string[];
+  techStacks?: string[];
+}
+
+export interface Education {
+  id: string;
+  degree: string;
+  school: string;
+  period: string;
+  details?: string;
 }
 
 export interface PortfolioData {
   user: User;
+  skillCategories: SkillCategory[];
   projects: Project[];
   experiences: Experience[];
+  education: Education[];
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar } from "lucide-react";
 import { Experience } from "@/types"; 
 
@@ -51,11 +52,21 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row md:items-start gap-6">
                   <div className="flex-shrink-0">
-                    <img
-                      src={exp.image}
-                      alt={exp.company}
-                      className="w-16 h-16 rounded-lg object-cover shadow-sm"
-                    />
+                    {exp.image ? (
+                      <img
+                        src={exp.image}
+                        alt={exp.company}
+                        className="w-16 h-16 rounded-lg object-cover shadow-sm"
+                      />
+                    ) : (
+                      <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center font-bold shadow-sm">
+                        {exp.company
+                          .split(" ")
+                          .map((part) => part[0])
+                          .slice(0, 2)
+                          .join("")}
+                      </div>
+                    )}
                   </div>
 
                   <div className="flex-grow">
@@ -87,9 +98,27 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                     </div>
 
                     {exp.description && (
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="text-gray-700 leading-relaxed mb-4">
                         {exp.description}
                       </p>
+                    )}
+
+                    {exp.highlights && exp.highlights.length > 0 && (
+                      <ul className="list-disc pl-5 space-y-2 text-gray-700 leading-relaxed">
+                        {exp.highlights.map((highlight) => (
+                          <li key={highlight}>{highlight}</li>
+                        ))}
+                      </ul>
+                    )}
+
+                    {exp.techStacks && exp.techStacks.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mt-4">
+                        {exp.techStacks.map((tech) => (
+                          <Badge key={tech} variant="outline" className="text-xs">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
                     )}
                   </div>
                 </div>
