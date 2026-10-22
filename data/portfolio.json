@@ -27,7 +27,14 @@
   "skillCategories": [
     {
       "name": "Languages",
-      "items": ["TypeScript", "JavaScript", "Java", "SQL", "HTML", "CSS"]
+      "items": [
+        "TypeScript",
+        "JavaScript",
+        "Java",
+        "SQL",
+        "HTML",
+        "CSS"
+      ]
     },
     {
       "name": "Frontend",
@@ -131,28 +138,15 @@
   ],
   "projects": [
     {
-      "id": "event-management",
-      "title": "Event Management System",
-      "description": "Full-stack event platform with a Node.js/Express API, Prisma, PostgreSQL, and a React.js admin portal. Includes role-based authentication, admin-driven user creation, auto-generated password emails, and REST APIs for users, events, and registrations.",
-      "techStacks": [
-        "Node.js",
-        "Express.js",
-        "Prisma",
-        "PostgreSQL",
-        "React.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "React Query"
-      ],
-      "image": "https://aaftonline.com/blog/wp-content/uploads/2023/03/Untitled-design-23.jpg",
-      "githubLink": "https://github.com/AravindAnkamalla/event-mangement-admin-dashboard",
-      "liveLink": ""
-    },
-    {
       "id": "devspace",
       "title": "Aravind Devspace",
       "description": "Personal portfolio for showcasing professional experience, projects, and contact details in a clean, responsive layout. Built with Next.js, Tailwind CSS, and shadcn/ui.",
-      "techStacks": ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"],
+      "techStacks": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "shadcn/ui"
+      ],
       "image": "https://images.unsplash.com/photo-1605379399642-870262d3d051?fm=jpg&q=60&w=3000",
       "githubLink": "https://github.com/AravindAnkamalla/devspace",
       "liveLink": "https://aravind-devspace.vercel.app"
